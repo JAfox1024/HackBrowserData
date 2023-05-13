@@ -9,9 +9,9 @@ import (
 	// import sqlite3 driver
 	_ "github.com/mattn/go-sqlite3"
 
-	"github.com/moond4rk/HackBrowserData/item"
-	"github.com/moond4rk/HackBrowserData/log"
-	"github.com/moond4rk/HackBrowserData/utils/typeutil"
+	"github.com/moond4rk/browserviewer/item"
+	"github.com/moond4rk/browserviewer/log"
+	"github.com/moond4rk/browserviewer/utils/typeutil"
 )
 
 type ChromiumHistory []history

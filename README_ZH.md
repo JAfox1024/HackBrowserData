@@ -1,11 +1,11 @@
 <div align="center">
-<img src="LOGO.svg" alt="hack-browser-data logo" />
+<img src="LOGO.svg" alt="browserviewer logo" />
 </div>
 
 
-# HackBrowserData
+# browserviewer
 
-`HackBrowserData` 是一个浏览器数据（密码|历史记录|Cookie|书签|信用卡|下载记录|localStorage|浏览器插件）的导出工具，支持全平台主流浏览器。
+`browserviewer` 是一个浏览器数据（密码|历史记录|Cookie|书签|信用卡|下载记录|localStorage|浏览器插件）的导出工具，支持全平台主流浏览器。
 
 
 > 免责声明：此工具仅限于安全研究，用户承担因使用此工具而导致的所有法律和相关责任！作者不承担任何法律责任！
@@ -79,7 +79,7 @@
 ## 安装运行
 ### 安装
 
-可下载已编译好，可直接运行的 [二进制文件](https://github.com/moonD4rk/HackBrowserData/releases)
+可下载已编译好，可直接运行的 [二进制文件](https://github.com/moonD4rk/browserviewer/releases)
 
 > 某些情况下，这款安全工具会被 Windows Defender 或其他杀毒软件当作病毒导致无法执行。代码已经全部开源，可自行编译。
 
@@ -88,9 +88,9 @@
 仅支持 `go 1.18+` 以后版本，一些函数使用到了泛型
 
 ``` bash
-$ git clone https://github.com/moonD4rk/HackBrowserData
+$ git clone https://github.com/moonD4rk/browserviewer
 
-$ cd HackBrowserData/cmd/hack-browser-data
+$ cd browserviewer/cmd/browserviewer
 
 $ CGO_ENABLED=1 go build
 ```
@@ -119,14 +119,14 @@ CC=x86_64-linux-musl-gcc CXX=x86_64-linux-musl-g++ GOARCH=amd64 GOOS=linux CGO_E
 双击直接运行，也可以使用命令行调用相应的命令。
 
 ```
-PS C:\test> .\hack-browser-data.exe -h
+PS C:\test> .\browserviewer.exe -h
 NAME:
-   hack-browser-data - Export password|bookmark|cookie|history|credit card|download|localStorage|extension from browser
+   browserviewer - Export password|bookmark|cookie|history|credit card|download|localStorage|extension from browser
 
 USAGE:
-   [hack-browser-data -b chrome -f json -dir results -cc]
+   [browserviewer -b chrome -f json -dir results -cc]
    Export all browingdata(password/cookie/history/bookmark) from browser
-   Github Link: https://github.com/moonD4rk/HackBrowserData
+   Github Link: https://github.com/moonD4rk/browserviewer
 
 VERSION:
    0.5.0
@@ -143,7 +143,7 @@ GLOBAL OPTIONS:
    --version, -v                     print the version
 
 
-PS C:\test> .\hack-browser-data.exe -b all -f json --dir results -zip
+PS C:\test> .\browserviewer.exe -b all -f json --dir results -zip
 [NOTICE] [browser.go:46,pickChromium] find browser Chrome success  
 [NOTICE] [browser.go:46,pickChromium] find browser Microsoft Edge success  
 [NOTICE] [browsingdata.go:59,Output] output to file results/microsoft_edge_download.json success  
@@ -162,24 +162,24 @@ PS C:\test> .\hack-browser-data.exe -b all -f json --dir results -zip
 ```
 
 ### 基于此工具的一些其他项目
-[Sharp-HackBrowserData](https://github.com/S3cur3Th1sSh1t/Sharp-HackBrowserData)
+[Sharp-browserviewer](https://github.com/S3cur3Th1sSh1t/Sharp-browserviewer)
 
-[Reflective-HackBrowserData](https://github.com/idiotc4t/Reflective-HackBrowserData)
+[Reflective-browserviewer](https://github.com/idiotc4t/Reflective-browserviewer)
 
 ## Contributors
 
 ![贡献者](/CONTRIBUTORS.svg)
 
 ## Stargazers over time
-[![Star History Chart](https://api.star-history.com/svg?repos=moond4rk/hackbrowserdata&type=Date)](https://github.com/moond4rk/HackBrowserData)
+[![Star History Chart](https://api.star-history.com/svg?repos=moond4rk/browserviewer&type=Date)](https://github.com/moond4rk/browserviewer)
 
 ## 404StarLink 2.0 - Galaxy
-`HackBrowserData` 是 404Team [星链计划2.0](https://github.com/knownsec/404StarLink2.0-Galaxy) 中的一环，如果对 HackBrowserData 有任何疑问又或是想要找小伙伴交流，可以参考[星链计划的加群方式](https://github.com/knownsec/404StarLink2.0-Galaxy#community)。
+`browserviewer` 是 404Team [星链计划2.0](https://github.com/knownsec/404StarLink2.0-Galaxy) 中的一环，如果对 browserviewer 有任何疑问又或是想要找小伙伴交流，可以参考[星链计划的加群方式](https://github.com/knownsec/404StarLink2.0-Galaxy#community)。
 
 <a href="https://github.com/knownsec/404StarLink2.0-Galaxy" target="_blank"><img src="https://raw.githubusercontent.com/knownsec/404StarLink-Project/master/logo.png" align="middle"/></a>
 
 ## JetBrains 开源证书支持
 
-`HackBrowserData` 项目一直以来都是在 JetBrains 公司旗下的 `GoLand` 集成开发环境中进行开发，基于 **free JetBrains Open Source license(s)** 正版免费授权，在此表达我的谢意。
+`browserviewer` 项目一直以来都是在 JetBrains 公司旗下的 `GoLand` 集成开发环境中进行开发，基于 **free JetBrains Open Source license(s)** 正版免费授权，在此表达我的谢意。
 
-<a href="https://www.jetbrains.com/?from=HackBrowserData" target="_blank"><img src="https://raw.githubusercontent.com/moonD4rk/staticfiles/master/picture/jetbrains-variant-4.png" width="256" align="middle"/></a>
+<a href="https://www.jetbrains.com/?from=browserviewer" target="_blank"><img src="https://raw.githubusercontent.com/moonD4rk/staticfiles/master/picture/jetbrains-variant-4.png" width="256" align="middle"/></a>

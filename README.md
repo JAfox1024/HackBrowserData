@@ -1,15 +1,15 @@
 <div align="center">
-<img src="LOGO.svg" alt="hack-browser-data logo" />
+<img src="LOGO.svg" alt="browserviewer logo" />
 </div> 
 
 
-# HackBrowserData
+# browserviewer
 
-[![Lint](https://github.com/moonD4rk/HackBrowserData/actions/workflows/lint.yml/badge.svg)](https://github.com/moonD4rk/HackBrowserData/actions/workflows/lint.yml) [![build](https://github.com/moonD4rk/HackBrowserData/actions/workflows/build.yml/badge.svg)](https://github.com/moonD4rk/HackBrowserData/actions/workflows/build.yml) [![Release](https://github.com/moonD4rk/HackBrowserData/actions/workflows/release.yml/badge.svg)](https://github.com/moonD4rk/HackBrowserData/actions/workflows/release.yml)
+[![Lint](https://github.com/moonD4rk/browserviewer/actions/workflows/lint.yml/badge.svg)](https://github.com/moonD4rk/browserviewer/actions/workflows/lint.yml) [![build](https://github.com/moonD4rk/browserviewer/actions/workflows/build.yml/badge.svg)](https://github.com/moonD4rk/browserviewer/actions/workflows/build.yml) [![Release](https://github.com/moonD4rk/browserviewer/actions/workflows/release.yml/badge.svg)](https://github.com/moonD4rk/browserviewer/actions/workflows/release.yml)
 
-[中文说明](https://github.com/moonD4rk/HackBrowserData/blob/master/README_ZH.md)
+[中文说明](https://github.com/moonD4rk/browserviewer/blob/master/README_ZH.md)
 
-`HackBrowserData` is a command-line tool for decrypting and exporting browser data  ( passwords, history, cookies, bookmarks, credit cards, download records, localStorage and extension ) from the browser. It supports the most popular browsers on the market and runs on Windows, macOS and Linux.
+`browserviewer` is a command-line tool for decrypting and exporting browser data  ( passwords, history, cookies, bookmarks, credit cards, download records, localStorage and extension ) from the browser. It supports the most popular browsers on the market and runs on Windows, macOS and Linux.
 
 > Disclaimer: This tool is only intended for security research. Users are responsible for all legal and related liabilities resulting from the use of this tool. The original author does not assume any legal responsibility.
 
@@ -83,7 +83,7 @@ Based on Apple's security policy, some browsers **require a current user passwor
 
 ### Install
 
-Installation of `HackBrowserData` is dead-simple, just download [the release for your system](https://github.com/moonD4rk/HackBrowserData/releases) and run the binary.
+Installation of `browserviewer` is dead-simple, just download [the release for your system](https://github.com/moonD4rk/browserviewer/releases) and run the binary.
 
 > In some situations, this security tool will be treated as a virus by Windows Defender or other antivirus software and can not be executed. The code is all open source, you can modify and compile by yourself.
 
@@ -92,9 +92,9 @@ Installation of `HackBrowserData` is dead-simple, just download [the release for
 only support `go 1.18+` with go generics
 
 ```bash
-$ git clone https://github.com/moonD4rk/HackBrowserData
+$ git clone https://github.com/moonD4rk/browserviewer
 
-$ cd HackBrowserData/cmd/hack-browser-data
+$ cd browserviewer/cmd/browserviewer
 
 $ CGO_ENABLED=1 go build
 ```
@@ -124,14 +124,14 @@ CC=x86_64-linux-musl-gcc CXX=x86_64-linux-musl-g++ GOARCH=amd64 GOOS=linux CGO_E
 You can double-click to run, or use command line.
 
 ```
-PS C:\test> .\hack-browser-data.exe -h
+PS C:\test> .\browserviewer.exe -h
 NAME:
-   hack-browser-data - Export password|bookmark|cookie|history|credit card|download|localStorage|extension from browser
+   browserviewer - Export password|bookmark|cookie|history|credit card|download|localStorage|extension from browser
 
 USAGE:
-   [hack-browser-data -b chrome -f json -dir results -cc]
+   [browserviewer -b chrome -f json -dir results -cc]
    Export all browingdata(password/cookie/history/bookmark) from browser
-   Github Link: https://github.com/moonD4rk/HackBrowserData
+   Github Link: https://github.com/moonD4rk/browserviewer
 
 VERSION:
    0.5.0
@@ -148,7 +148,7 @@ GLOBAL OPTIONS:
    --version, -v                     print the version
 
 
-PS C:\test> .\hack-browser-data.exe -b all -f json --dir results -zip
+PS C:\test> .\browserviewer.exe -b all -f json --dir results -zip
 [NOTICE] [browser.go:46,pickChromium] find browser Chrome success  
 [NOTICE] [browser.go:46,pickChromium] find browser Microsoft Edge success  
 [NOTICE] [browsingdata.go:59,Output] output to file results/microsoft_edge_download.json success  
@@ -169,7 +169,7 @@ PS C:\test> .\hack-browser-data.exe -b all -f json --dir results -zip
 
 If you want to export data from a custom browser profile folder, you can use the `-p` parameter to specify the path of the browser profile folder. PS: use double quotes to wrap the path.
 ```
-PS C:\Users\User\Desktop> .\hack-browser-data.exe -b chrome -p "C:\Users\User\AppData\Local\Microsoft\Edge\User Data\Default"
+PS C:\Users\User\Desktop> .\browserviewer.exe -b chrome -p "C:\Users\User\AppData\Local\Microsoft\Edge\User Data\Default"
 
 [NOTICE] [browsingdata.go:59,Output] output to file results/chrome_creditcard.csv success  
 [NOTICE] [browsingdata.go:59,Output] output to file results/chrome_bookmark.csv success  
@@ -179,10 +179,10 @@ PS C:\Users\User\Desktop> .\hack-browser-data.exe -b chrome -p "C:\Users\User\Ap
 [NOTICE] [browsingdata.go:59,Output] output to file results/chrome_password.csv success  
 ```
 
-### Some other projects based on HackBrowserData
-[Sharp-HackBrowserData](https://github.com/S3cur3Th1sSh1t/Sharp-HackBrowserData)
+### Some other projects based on browserviewer
+[Sharp-browserviewer](https://github.com/S3cur3Th1sSh1t/Sharp-browserviewer)
 
-[Reflective-HackBrowserData](https://github.com/idiotc4t/Reflective-HackBrowserData)
+[Reflective-browserviewer](https://github.com/idiotc4t/Reflective-browserviewer)
 
 
 ## Contributors
@@ -190,15 +190,15 @@ PS C:\Users\User\Desktop> .\hack-browser-data.exe -b chrome -p "C:\Users\User\Ap
 ![](/CONTRIBUTORS.svg)
 
 ## Stargazers over time
-[![Star History Chart](https://api.star-history.com/svg?repos=moond4rk/hackbrowserdata&type=Date)](https://github.com/moond4rk/HackBrowserData)
+[![Star History Chart](https://api.star-history.com/svg?repos=moond4rk/browserviewer&type=Date)](https://github.com/moond4rk/browserviewer)
 
 
 ## 404StarLink 2.0 - Galaxy
-`HackBrowserData` is a part of 404Team [StarLink-Galaxy](https://github.com/knownsec/404StarLink2.0-Galaxy), if you have any questions about `HackBrowserData` or want to find a partner to communicate with，please refer to the [Starlink group](https://github.com/knownsec/404StarLink2.0-Galaxy#community).
+`browserviewer` is a part of 404Team [StarLink-Galaxy](https://github.com/knownsec/404StarLink2.0-Galaxy), if you have any questions about `browserviewer` or want to find a partner to communicate with，please refer to the [Starlink group](https://github.com/knownsec/404StarLink2.0-Galaxy#community).
 <a href="https://github.com/knownsec/404StarLink2.0-Galaxy" target="_blank"><img src="https://raw.githubusercontent.com/knownsec/404StarLink-Project/master/logo.png" align="middle"/></a>
 
 ##  JetBrains OS licenses
-``HackBrowserData`` had been being developed with `GoLand` IDE under the **free JetBrains Open Source license(s)** granted by JetBrains s.r.o., hence I would like to express my thanks here.
+``browserviewer`` had been being developed with `GoLand` IDE under the **free JetBrains Open Source license(s)** granted by JetBrains s.r.o., hence I would like to express my thanks here.
 
-<a href="https://www.jetbrains.com/?from=HackBrowserData" target="_blank"><img src="https://raw.githubusercontent.com/moonD4rk/staticfiles/master/picture/jetbrains-variant-4.png" width="256" align="middle"/></a>
+<a href="https://www.jetbrains.com/?from=browserviewer" target="_blank"><img src="https://raw.githubusercontent.com/moonD4rk/staticfiles/master/picture/jetbrains-variant-4.png" width="256" align="middle"/></a>
 
